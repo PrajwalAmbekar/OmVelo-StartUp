@@ -8,9 +8,9 @@ const userSchema= new mongoose.Schema({
     token:{
         type:String,
     }
-},{timestamp:true}
+},{timestamps:true}
 );
 
-const user=mongoose.model('User',userSchema);
+const User=mongoose.model('User',userSchema);
 
-export default user;
+export default User;
