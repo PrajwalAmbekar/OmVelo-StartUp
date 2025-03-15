@@ -8,7 +8,7 @@ const proceedToPay = () => {
   const {setPaymentDone,token,setOrderId}=useAuthStore();
   const navigate = useNavigate();
 
-
+  console.log("Current token in Zustand:", token);
   const handlePayment=async()=>{
     if(!token ){
       alert("Submit MPIN first!");

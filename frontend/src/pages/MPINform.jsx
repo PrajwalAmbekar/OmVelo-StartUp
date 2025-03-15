@@ -14,6 +14,7 @@ const MPINform = () => {
     try {
       const res=await axiosInstance.post("/user_auth/generate-token",{mpin});
       setToken(res.data.token);
+      console.log("Token received from backend:", res.data.token);
       alert("MPIN submitted! Now proceed to payment.");
       navigate('/ProceedToPay');
     } catch (error) {
