@@ -4,7 +4,7 @@ import { connectDb } from "./lib/db.js";
 import userauth from "../src/routes/deviceintegraion.route.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import auth from "../src/routes/auth.route.js";
+// import auth from "../src/routes/auth.route.js";
 dotenv.config();
 
 const app = express();
@@ -17,7 +17,7 @@ app.use(
   );
 app.use(cookieParser());
 app.use("/api/user_auth",userauth);
-app.use("/api/auth",auth);
+// app.use("/api/auth",auth);
 
 const port = process.env.PORT;
 
